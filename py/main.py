@@ -10,7 +10,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--mode', default='full', type=str, help='Whether to perform the full pipeline or a specific module.')
 parser.add_argument('--decompress', default=True, type=bool, help='Whether to decompress zipped files during parsing.')
 parser.add_argument('--startId', default=1, type=int, help='First dataset id to process.')
-parser.add_argument('--endId', default=89217, type=int, help='Last dataset id to process.')
+parser.add_argument('--endId', default=89218, type=int, help='Last dataset id to process.')
 args = parser.parse_args()
 
 # Initialize useful variables
