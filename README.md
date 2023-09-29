@@ -23,7 +23,7 @@ Clone the ACORDAR Test Collection
 ```
 
 ### Prepare the environment
-We provide a `requirements.txt`file in the `py` directory with a list of all required libraires. To install the packages according to the requirements files:
+We provide a `requirements.txt` file in the `py` directory with a list of all required libraries. To install the packages according to the requirements files:
 
 Go to the py directory
 ```bash
@@ -35,13 +35,13 @@ Install the required packages
   pip install -r requirements.txt
 ```
 
-**Wget log files language:** The code exploit the Wget program to download the datasets and extract the download statistics anlyzing the Wget log file, which may be produced in the system's preferred language. These statistics are necessary for the correct execution of the parsing phase. Please make sure Wget log files are in English.
+**Wget log files language:** The code exploits the Wget program to download the datasets and extract the download statistics analyzing the Wget log file, which may be produced in the system's preferred language. These statistics are necessary for the correct execution of the parsing phase. Please make sure the Wget log files are in English.
 
 
 ## Usage
 Users can deploy the code using `main.py` and setting the following parameters:
 
-- `---mode` [default value: `full`]: specifies the run modality. Indeed, it is possible to perform the full pipeline (download + parse) or execute a specific module. Possible values are: `full`to run the full pipeline; `download`to download the datasets; `parse`to parse the datasets. Note that to  perform only the parsing phase you must have already downloaded the datasets. 
+- `---mode` [default value: `full`]: specifies the run modality. Indeed, it is possible to perform the full pipeline (download + parse) or execute a specific module. Possible values are: `full` to run the full pipeline; `download` to download the datasets; and `parse` to parse the datasets. Note that to  perform only the parsing phase you must have already downloaded the datasets. 
 
 - `--decompress` [default value: `True`]: specifies whether the compressed files must be decompressed during the parsing phase.
 
@@ -59,6 +59,6 @@ python main.py --mode="full" --decompress=True --startId=1 --endId=89218
 ```
 
 ## Post-Processing Scripts
-The `py`directory comprises a package called `post_processing`, which includes two scripts used to extract the empty datasets and provide the data fields in a formt ready to be indexed.
+The `py` directory comprises a package called `post_processing`, which includes two scripts used to extract the empty datasets and provide the data fields in a format ready to be indexed.
 - `identify_empty_datasets.py` creates a dictionary containing the identifiers of all the datasets with no content information, i.e. all data fields are empty. The dictionary is stored in `output/results/`.
-- `prepare_indexable_content.py` creates a dictionary for each datasets containing data field information ready to be indexed. In particular, for each field we create a single document where each item is separated by a space. The dictionaries are stored in `output/indexable_content`.
+- `prepare_indexable_content.py` creates a dictionary for each dataset containing data field information ready to be indexed. In particular, for each field, we create a single document where each item is separated by a space. The dictionaries are stored in `output/indexable_content`.
