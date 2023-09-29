@@ -41,7 +41,9 @@ Install the required packages
 ## Usage
 Users can deploy the code using `main.py` and setting the following parameters:
 
-- `---mode` [default value: `full`]: specifies the run modality. Indeed, it is possible to perform the full pipeline (download + parse) or execute a specific module. Possible values are: `full` to run the full pipeline; `download` to download the datasets; and `parse` to parse the datasets. Note that to  perform only the parsing phase you must have already downloaded the datasets. 
+- `---mode` [default value: `full`]: specifies the run modality. Indeed, it is possible to perform the full pipeline (download + parse) or execute a specific module. Possible values are: `full` to run the full pipeline; `download` to download the datasets; and `parse` to parse the datasets. Note that to  perform only the parsing phase you must have already downloaded the datasets.
+
+- `--signature` [default value: ``]: specifies the signature of the file containing the download_infos used during the parsing phase. Used only if mode is `parse`.
 
 - `--decompress` [default value: `True`]: specifies whether the compressed files must be decompressed during the parsing phase.
 
