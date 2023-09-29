@@ -1,7 +1,7 @@
 
 # resources
 
-This repository contains useful resource to run the code, including the ACORDAR Test Collection.
+This repository contains useful resources to run the code, including the ACORDAR Test Collection.
 
 
 
