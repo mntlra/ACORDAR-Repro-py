@@ -6,12 +6,20 @@ __pycache__/
 # C extensions
 *.so
 
+# Output files and resources
+resources/
+output/logs/
+output/downloads/
+output/results
+output/logs
+output/indexable_content
+output/stats
+
 # Distribution / packaging
 .Python
 build/
 develop-eggs/
 dist/
-downloads/
 eggs/
 .eggs/
 lib/
