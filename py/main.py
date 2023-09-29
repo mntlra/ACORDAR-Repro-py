@@ -8,6 +8,7 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--mode', default='full', type=str, help='Whether to perform the full pipeline or a specific module.')
+parser.add_argument('--signature', default='', type=str, help='download_infos file signature. used only if mode is \'parse\'')
 parser.add_argument('--decompress', default=True, type=bool, help='Whether to decompress zipped files during parsing.')
 parser.add_argument('--startId', default=1, type=int, help='First dataset id to process.')
 parser.add_argument('--endId', default=89218, type=int, help='Last dataset id to process.')
@@ -39,8 +40,8 @@ def main():
             json.dump(downloaded_dataset, fd)
 
     if args.mode == 'parse' or args.mode == 'full':
-
-        ParseRDFlib().parse_datasets(datasets, start_id, end_id, signature, args.decompress)
+        info_signature = args.signature if args.mode == "parse" else signature
+        ParseRDFlib(info_signature).parse_datasets(datasets, start_id, end_id, signature, args.decompress)
 
 
 if __name__ == "__main__":

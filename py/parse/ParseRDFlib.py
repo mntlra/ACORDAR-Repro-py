@@ -15,7 +15,7 @@ class ParseRDFlib:
     A class used to parse downloaded datasets using rdflib library.
     """
 
-    def __init__(self):
+    def __init__(self, signature):
         """
         Initialization Function
         """
@@ -34,7 +34,7 @@ class ParseRDFlib:
         self.compressed_formats = ['[application/gzip]', '[application/x-gzip]', '[application/zip]', '[zip]']
         self.invalid_types = ['[text/csv]', '[text/html]', '[text/plain]']
         # Load download information to access each downloaded file's type
-        self.datasets_info = pd.read_csv(self.output_path+"results/download/download_infos_FULL.csv")
+        self.datasets_info = pd.read_csv(self.output_path+f"results/download/download_infos_{signature}.csv", sep=";")
 
     def restrict_infos(self, start_id, end_id):
         """
