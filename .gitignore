@@ -11,7 +11,7 @@
 
 # Output files and resources
 resources/
-#output/
+output/
 
 # Distribution / packaging
 .Python
