@@ -8,12 +8,8 @@ __pycache__/
 *.so
 
 # Output files and resources
-# resources/
-# output/logs/
-# output/downloads/
-# output/results/
-# output/indexable_content/
-# output/stats/
+resources/
+output/
 
 # Distribution / packaging
 .Python
