@@ -14,12 +14,12 @@ The program downloads and parses datasets starting from the corpus of ACORDAR pr
 
 Go to the resources directory
 ```bash
-  cd resources
+$  cd resources
 ```
 
 Clone the ACORDAR Test Collection
 ```bash
-  git clone https://github.com/nju-websoft/ACORDAR/
+$  git clone https://github.com/nju-websoft/ACORDAR/
 ```
 
 ### Prepare the environment
@@ -27,12 +27,12 @@ We provide a `requirements.txt` file in the `py` directory with a list of all re
 
 Go to the py directory
 ```bash
-  cd py
+$  cd py
 ```
 
 Install the required packages
 ```bash
-  pip install -r requirements.txt
+$  pip install -r requirements.txt
 ```
 
 **Wget log files language:** The code exploits the Wget program to download the datasets and extract the download statistics analyzing the Wget log file, which may be produced in the system's preferred language. These statistics are necessary for the correct execution of the parsing phase. Please make sure the Wget log files are in English.
@@ -57,7 +57,7 @@ Users can deploy the code using `main.py` and setting the following parameters:
 To download and parse the complete ACORDAR Test Collection run:
 
 ```bash
-python main.py --mode="full" --decompress=True --startId=1 --endId=89218
+$ python main.py --mode="full" --decompress=True --startId=1 --endId=89218
 ```
 
 ## Post-Processing Scripts
